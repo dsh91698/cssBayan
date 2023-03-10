@@ -1,10 +1,10 @@
 body  {
     height: 100vh;
-    background-color: red;
+    background-color: azure;
     display: flex;
 }
 
 p {
 height: 40pt;
-font-size: 40pt;
+font-size: 20pt;
 }

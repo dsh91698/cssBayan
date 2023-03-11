@@ -1,10 +1,29 @@
+/* colors */
+/* CSS HSL */
+:root {
+--wenge: hsla(349, 7%, 31%, 1);
+--mint-cream: hsla(96, 38%, 95%, 1);
+--cambridge-blue: hsla(156, 33%, 67%, 1);
+--rose-red: hsla(348, 52%, 46%, 1);
+--flax: hsla(48, 64%, 70%, 1);
+}
+
 body  {
     height: 100vh;
-    background-color: azure;
+    background-color: var(--wenge);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* .body {
+} */
+.header {
+}
+.footer {
 }
 
 p {

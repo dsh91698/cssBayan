@@ -6,10 +6,13 @@
 --cambridge-blue: hsla(156, 33%, 67%, 1);
 --rose-red: hsla(348, 52%, 46%, 1);
 --flax: hsla(48, 64%, 70%, 1);
+
+--br-big: 25pt;
+--br-lesser: 10pt;
 }
 
-body  {
-    height: 100vh;
+.body  {
+    height: 100%;
     background-color: var(--wenge);
     display: flex;
     flex-direction: column;
@@ -19,14 +22,41 @@ body  {
     padding: 0;
 }
 
-/* .body {
-} */
-.header {
-}
-.footer {
-}
+.header, .footer, .container {
+    background-color: var(--rose-red);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-p {
-height: 40pt;
-font-size: 20pt;
+    font-size: 20pt;
+}
+/* .footer {
+    background-color: var(--rose-red);
+    width: 100%;
+} */
+
+.container {
+    width: 80%;
+    height: 100%;
+    /* border-radius: var(--br-big); */
+    background-color: var(--wenge);
+    justify-content: flex-start;
+    margin: 10px;
+}
+.mem-container {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: var(--br-lesser);
+    background-color: var(--flax);
+
+}
+.mem-header {
+    background-color: var(--rose-red);
+    border-radius: var(--br-lesser) var(--br-lesser) 0 0;
+
+}
+.mem-body {
+    height: 50px;
 }

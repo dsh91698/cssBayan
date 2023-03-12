@@ -74,7 +74,20 @@ html {
     background-color: var(--rose-red);
     border-radius: var(--br-lesser) var(--br-lesser) 0 0;
     height: 45px;
-    ;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.mem-container:hover .mem-header {
+    background-color: #ddd;
+    transition: background-color 0.5s ease-out;
+}
+
+.mem-container:hover .mem-body {
+    background-color: #ddd;
+    transition: all 0.5s ease-out;
+    max-height: 380px;
+    transition: max-height 0.5s ease-in-out;
 }
 
 .mem-body {
@@ -83,7 +96,10 @@ html {
     align-items: center;
     justify-content: center;
     height: 380px;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    /* display: none; */
 }
 
 img {
@@ -93,4 +109,9 @@ img {
 
 .mem-header:hover~div {
     display: flex;
+}
+
+.mem-container:target .mem-body {
+    max-height: 380px;
+    transition: max-height 0.5s ease-in-out;
 }

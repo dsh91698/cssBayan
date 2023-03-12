@@ -1,17 +1,17 @@
-/* colors */
-/* CSS HSL */
 :root {
---wenge: hsla(349, 7%, 31%, 1);
---mint-cream: hsla(96, 38%, 95%, 1);
---cambridge-blue: hsla(156, 33%, 67%, 1);
---rose-red: hsla(348, 52%, 46%, 1);
---flax: hsla(48, 64%, 70%, 1);
-
---br-big: 25pt;
---br-lesser: 10pt;
+    /* colors */
+    /* CSS HSL */
+    --wenge: hsla(349, 7%, 31%, 1);
+    --mint-cream: hsla(96, 38%, 95%, 1);
+    --cambridge-blue: hsla(156, 33%, 67%, 1);
+    --rose-red: hsla(348, 52%, 46%, 1);
+    --flax: hsla(48, 64%, 70%, 1);
+    /* rounding corners */
+    --br-big: 25pt;
+    --br-lesser: 10pt;
 }
 
-.body  {
+.body {
     height: 100%;
     background-color: var(--wenge);
     display: flex;
@@ -22,16 +22,19 @@
     padding: 0;
 }
 
-.header, .footer, .container {
+.header,
+.footer,
+.container {
     background-color: var(--rose-red);
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     font-size: 20pt;
 }
+
+
 /* .footer {
     background-color: var(--rose-red);
     width: 100%;
@@ -45,18 +48,19 @@
     justify-content: flex-start;
     margin: 10px;
 }
+
 .mem-container {
     width: 100%;
     margin-top: 10px;
     border-radius: var(--br-lesser);
     background-color: var(--flax);
-
 }
+
 .mem-header {
     background-color: var(--rose-red);
     border-radius: var(--br-lesser) var(--br-lesser) 0 0;
-
 }
+
 .mem-body {
     height: 50px;
 }

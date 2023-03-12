@@ -27,6 +27,10 @@ html {
     padding: 0;
 }
 
+.acc-hidden {
+    display: none;
+}
+
 .header,
 .footer,
 .container {
@@ -123,7 +127,9 @@ img {
     transition: max-height 0.5s ease-in-out;
 }
 
+
+/* 
 .mem-container:nth-child(1) .mem-body {
     max-height: 1000px;
     overflow: visible;
-}
+} */

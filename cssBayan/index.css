@@ -57,12 +57,20 @@
 }
 
 .mem-header {
+    /* text-align: center; */
+    text-align: left;
+    padding-left: 10px;
     background-color: var(--rose-red);
     border-radius: var(--br-lesser) var(--br-lesser) 0 0;
 }
 
 .mem-body {
+    display: none;
     /* height: 50px; */
 }
 
 img {}
+
+.mem-header:hover~div {
+    display: block;
+}

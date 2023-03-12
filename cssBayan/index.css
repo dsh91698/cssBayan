@@ -124,10 +124,16 @@ input:checked+.mem-container .mem-body {
 }
 
 .mem-container .mem-header::after {
+    font-size: 2em;
     content: "+ ";
     display: inline-block;
+    transition: transform 0.7s ease;
+    transform: rotate(90deg);
 }
 
 .acc-hidden:checked+.mem-container .mem-header::after {
+    font-size: 2em;
     content: "- ";
+    transition: transform 0.7s ease;
+    transform: rotate(180deg);
 }

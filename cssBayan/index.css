@@ -1,162 +1,170 @@
-                                         :root {
-                                            /* colors */
-                                            /* CSS HSL */
-                                            --wenge: hsla(349, 7%, 31%, 1);
-                                            --mint-cream: hsla(96, 38%, 95%, 1);
-                                            --cambridge-blue: hsla(156, 33%, 67%, 1);
-                                            --rose-red: hsla(348, 52%, 46%, 1);
-                                            --flax: hsla(48, 64%, 70%, 1);
-                                            /* rounding corners */
-                                            --br-big: 25pt;
-                                            --br-lesser: 10pt;
-                                        }
-                                        
-                                        html {
-                                            scroll-behavior: smooth;
-                                            transition: all 0.9s ease-out;
-                                        }
-                                        
-                                        a {
-                                            text-decoration: none;
-                                        }
-                                        
-                                        .body {
-                                            min-height: 100vh;
-                                            background-color: var(--wenge);
-                                            display: flex;
-                                            flex-direction: column;
-                                            justify-content: space-between;
-                                            align-items: center;
-                                            margin: 0;
-                                            padding: 0;
-                                        }
-                                        
-                                        .acc-hidden {
-                                            display: none;
-                                        }
-                                        
-                                        .header,
-                                        .footer,
-                                        .container {
-                                            background-color: var(--rose-red);
-                                            width: 100%;
-                                            display: flex;
-                                            flex-direction: column;
-                                            justify-content: center;
-                                            align-items: center;
-                                            font-size: 20pt;
-                                        }
-                                        
-                                        .container {
-                                            display: flex;
-                                            flex-direction: column;
-                                            min-height: 80vh;
-                                            justify-content: flex-start;
-                                            background-color: var(--wenge);
-                                        }
-                                        
-                                        .accordion {
-                                            width: 80%;
-                                            height: 100%;
-                                            background-color: var(--wenge);
-                                            justify-content: flex-start;
-                                            margin: 10px;
-                                        }
-                                        
-                                        .mem-container {
-                                            width: 100%;
-                                            margin-top: 10px;
-                                            border-radius: var(--br-lesser);
-                                            background-color: var(--flax);
-                                        }
-                                        
-                                        .mem-header {
-                                            display: flex;
-                                            justify-content: space-between;
-                                            align-items: center;
-                                            padding-left: 10px;
-                                            background-color: var(--rose-red);
-                                            border-radius: var(--br-lesser);
-                                            height: 45px;
-                                            cursor: pointer;
-                                            font-weight: bold;
-                                            padding: 0 30px;
-                                        }
-                                        
-                                        .mem-container:hover {
-                                            border: 5px solid var(--rose-red);
-                                            transition: border 0.5s ease-out;
-                                        }
-                                        
-                                        .mem-container:hover .mem-header {
-                                            border-radius: var(--br-lesser) var(--br-lesser) 0 0;
-                                            background-color: var(--mint-cream);
-                                            transition: background-color 0.5s ease-out;
-                                        }
-                                        
-                                        .mem-container:hover .mem-body {
-                                            background-color: var(--flax);
-                                            transition: all 0.5s ease-out;
-                                            max-height: 380px;
-                                            transition: max-height 0.5s ease-in-out;
-                                        }
-                                        
-                                        .mem-body {
-                                            display: flex;
-                                            flex-direction: column;
-                                            align-items: center;
-                                            justify-content: center;
-                                            height: 380px;
-                                            max-height: 0;
-                                            border-radius: var(--br-lesser);
-                                            overflow: hidden;
-                                            transition: max-height 0.2s ease-out;
-                                        }
-                                        
-                                        img {
-                                            max-width: 100%;
-                                            max-height: 100%;
-                                        }
-                                        
-                                        input:checked+.mem-container .mem-body {
-                                            max-height: 380px;
-                                            overflow: visible;
-                                        }
-                                        
-                                        .mem-container .mem-header::after {
-                                            font-size: 2em;
-                                            content: "+ ";
-                                            display: inline-block;
-                                            transition: transform 0.7s ease;
-                                            transform: rotate(90deg);
-                                        }
-                                        
-                                        .acc-hidden:checked+.mem-container .mem-header::after {
-                                            font-size: 2em;
-                                            content: "- ";
-                                            transition: transform 0.7s ease;
-                                            transform: rotate(180deg);
-                                        }
-                                        /* Mobile styles */
-                                        
-                                        @media screen and (max-width: 320px) {
-                                            .body,
-                                            .container {
-                                                background-color: var(--mint-cream);
-                                                font-size: 10pt;
-                                            }
-                                            .mem-header {
-                                                font-size: 12px !important;
-                                            }
-                                        }
-                                        /* Tablet styles */
-                                        
-                                        @media screen and (min-width: 321px) and (max-width: 820px) {
-                                            .body,
-                                            .container {
-                                                background-color: var(--cambridge-blue);
-                                            }
-                                            .mem-header {
-                                                font-size: 14px !important;
-                                            }
-                                        }
+                                                                     :root {
+                                                                        /* colors */
+                                                                        /* CSS HSL */
+                                                                        --wenge: hsla(349, 7%, 31%, 1);
+                                                                        --mint-cream: hsla(96, 38%, 95%, 1);
+                                                                        --cambridge-blue: hsla(156, 33%, 67%, 1);
+                                                                        --rose-red: hsla(348, 52%, 46%, 1);
+                                                                        --flax: hsla(48, 64%, 70%, 1);
+                                                                        /* rounding corners */
+                                                                        --br-big: 2rem;
+                                                                        --br-lesser: 1rem;
+                                                                    }
+                                                                    
+                                                                    html {
+                                                                        scroll-behavior: smooth;
+                                                                        transition: all 0.9s ease-out;
+                                                                    }
+                                                                    
+                                                                    a {
+                                                                        text-decoration: none;
+                                                                    }
+                                                                    
+                                                                    .body {
+                                                                        min-height: 100vh;
+                                                                        background-color: var(--wenge);
+                                                                        display: flex;
+                                                                        flex-direction: column;
+                                                                        justify-content: space-between;
+                                                                        align-items: center;
+                                                                        margin: 0;
+                                                                        padding: 0;
+                                                                    }
+                                                                    
+                                                                    .acc-hidden {
+                                                                        display: none;
+                                                                    }
+                                                                    
+                                                                    .header,
+                                                                    .footer,
+                                                                    .container {
+                                                                        background-color: var(--rose-red);
+                                                                        width: 100%;
+                                                                        display: flex;
+                                                                        flex-direction: column;
+                                                                        justify-content: center;
+                                                                        align-items: center;
+                                                                        font-size: 2em;
+                                                                    }
+                                                                    
+                                                                    .container {
+                                                                        display: flex;
+                                                                        flex-direction: column;
+                                                                        min-height: 80vh;
+                                                                        justify-content: flex-start;
+                                                                        background-color: var(--wenge);
+                                                                    }
+                                                                    
+                                                                    .accordion {
+                                                                        width: 80%;
+                                                                        height: 100%;
+                                                                        background-color: var(--wenge);
+                                                                        justify-content: flex-start;
+                                                                        margin: 0.5em;
+                                                                    }
+                                                                    
+                                                                    .mem-container {
+                                                                        width: 100%;
+                                                                        margin-top: 0.1em;
+                                                                        border-radius: var(--br-lesser);
+                                                                        background-color: var(--flax);
+                                                                    }
+                                                                    
+                                                                    .mem-header {
+                                                                        display: flex;
+                                                                        justify-content: space-between;
+                                                                        align-items: center;
+                                                                        padding-left: 0.5em;
+                                                                        background-color: var(--rose-red);
+                                                                        border-radius: var(--br-lesser);
+                                                                        height: 3.5em;
+                                                                        cursor: pointer;
+                                                                        font-weight: bold;
+                                                                        padding: 0 2em;
+                                                                    }
+                                                                    
+                                                                    .mem-container:hover {
+                                                                        border: 0.1em solid var(--rose-red);
+                                                                        transition: border 0.5s ease-out;
+                                                                    }
+                                                                    
+                                                                    .mem-container:hover .mem-header {
+                                                                        border-radius: var(--br-lesser) var(--br-lesser) 0 0;
+                                                                        background-color: var(--mint-cream);
+                                                                        transition: background-color 0.5s ease-out;
+                                                                    }
+                                                                    
+                                                                    .mem-container:hover .mem-body {
+                                                                        background-color: var(--flax);
+                                                                        transition: all 0.5s ease-out;
+                                                                        max-height: 40em;
+                                                                        transition: max-height 0.5s ease-in-out;
+                                                                    }
+                                                                    
+                                                                    .mem-body {
+                                                                        display: flex;
+                                                                        flex-direction: column;
+                                                                        align-items: center;
+                                                                        justify-content: center;
+                                                                        height: 35rem;
+                                                                        max-height: 0;
+                                                                        border-radius: var(--br-lesser);
+                                                                        overflow: hidden;
+                                                                        transition: max-height 0.2s ease-out;
+                                                                    }
+                                                                    
+                                                                    img {
+                                                                        max-width: 100%;
+                                                                        max-height: 100%;
+                                                                    }
+                                                                    
+                                                                    input:checked+.mem-container .mem-body {
+                                                                        max-height: 35rem;
+                                                                        overflow: visible;
+                                                                    }
+                                                                    
+                                                                    .mem-container .mem-header::after {
+                                                                        font-size: 2em;
+                                                                        content: "+ ";
+                                                                        display: inline-block;
+                                                                        transition: transform 0.7s ease;
+                                                                        transform: rotate(90deg);
+                                                                    }
+                                                                    
+                                                                    .acc-hidden:checked+.mem-container .mem-header::after {
+                                                                        font-size: 2em;
+                                                                        content: "- ";
+                                                                        transition: transform 0.7s ease;
+                                                                        transform: rotate(180deg);
+                                                                    }
+                                                                    /* Mobile styles */
+                                                                    
+                                                                    @media screen and (max-width: 320px) {
+                                                                        .body,
+                                                                        .container {
+                                                                            background-color: var(--mint-cream);
+                                                                            font-size: 0.8rem;
+                                                                        }
+                                                                        .mem-header {
+                                                                            font-size: 0.8rem !important;
+                                                                        }
+                                                                        input:checked+.mem-container .mem-body {
+                                                                            max-height: 20rem;
+                                                                            overflow: visible;
+                                                                        }
+                                                                    }
+                                                                    /* Tablet styles */
+                                                                    
+                                                                    @media screen and (min-width: 321px) and (max-width: 820px) {
+                                                                        .body,
+                                                                        .container {
+                                                                            background-color: var(--cambridge-blue);
+                                                                        }
+                                                                        .mem-header {
+                                                                            font-size: 1rem !important;
+                                                                        }
+                                                                        input:checked+.mem-container .mem-body {
+                                                                            max-height: 30rem;
+                                                                            overflow: visible;
+                                                                        }
+                                                                    }
